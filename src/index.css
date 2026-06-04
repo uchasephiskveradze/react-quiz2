@@ -1,0 +1,84 @@
+:root {
+  --color-primary: #6c63ff;
+  --color-light: #f7f7f7;
+  --color-dark: #252525;
+
+  --bg-color: var(--color-light);
+  --text-color: var(--color-dark);
+  --primary-color: var(--color-primary);
+  --border-color: var(--color-primary);
+  --input-bg: #ffffff;
+  --search-border: var(--color-primary);
+  --search-text: var(--color-primary);
+  --icon-muted: #b0b0b0;
+  --icon-edit-hover: var(--color-primary);
+  --icon-delete-hover: #e53935;
+  --dropdown-bg: #ffffff;
+  --dropdown-hover: rgba(108, 99, 255, 0.12);
+  --modal-overlay: rgba(37, 37, 37, 0.45);
+  --modal-bg: #ffffff;
+  --modal-border: var(--color-primary);
+  --modal-input-bg: #ffffff;
+  --button-text: #ffffff;
+  --shadow-primary: 0 0 16px rgba(108, 99, 255, 0.55);
+  --focus-ring: 0 0 0 3px rgba(108, 99, 255, 0.35);
+}
+
+[data-theme='dark'] {
+  --bg-color: var(--color-dark);
+  --text-color: #ffffff;
+  --input-bg: var(--color-dark);
+  --search-border: #ffffff;
+  --search-text: #ffffff;
+  --icon-muted: #9e9e9e;
+  --dropdown-bg: #ffffff;
+  --dropdown-hover: rgba(108, 99, 255, 0.12);
+  --modal-overlay: rgba(0, 0, 0, 0.7);
+  --modal-bg: var(--color-dark);
+  --modal-border: rgba(255, 255, 255, 0.9);
+  --modal-input-bg: transparent;
+  --focus-ring: 0 0 0 3px rgba(255, 255, 255, 0.25);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: 'Kanit', system-ui, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#root {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
